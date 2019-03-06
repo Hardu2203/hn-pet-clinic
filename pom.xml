@@ -5,7 +5,7 @@
 	<packaging>pom</packaging>
 	<groupId>nel.hardu</groupId>
 	<artifactId>hn-pet-clinic</artifactId>
-	<version>0.0.9-SNAPSHOT</version>
+	<version>0.0.8-SNAPSHOT</version>
 	<name>hn-pet-clinic</name>
 	<description>Hardu se pet clinic</description>
 
