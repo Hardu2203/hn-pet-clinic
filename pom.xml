@@ -5,7 +5,7 @@
 	<packaging>pom</packaging>
 	<groupId>nel.hardu</groupId>
 	<artifactId>hn-pet-clinic</artifactId>
-	<version>0.0.8-SNAPSHOT</version>
+	<version>0.0.8</version>
 	<name>hn-pet-clinic</name>
 	<description>Hardu se pet clinic</description>
 
@@ -63,7 +63,7 @@
 	<scm>
 		<developerConnection>scm:git:https://github.com/Hardu2203/hn-pet-clinic.git</developerConnection>
 	  <!--<tag>hn-pet-clinic-0.0.1</tag>-->
-		<tag>HEAD</tag>
+		<tag>hn-pet-clinic-0.0.8</tag>
   </scm>
 
 </project>
