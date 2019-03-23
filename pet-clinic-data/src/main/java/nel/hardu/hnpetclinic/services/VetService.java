@@ -2,14 +2,10 @@ package nel.hardu.hnpetclinic.services;
 
 import nel.hardu.hnpetclinic.model.Vet;
 
-import java.util.Set;
 
-public interface VetService {
 
-    Vet findById(Long Id);
+public interface VetService extends CrudService<Vet, Long>{
 
-    Vet save(Vet vet);
 
-    Set<Vet> findAll();
 
 }
