@@ -2,9 +2,11 @@ package nel.hardu.hnpetclinic.services.map;
 
 import nel.hardu.hnpetclinic.model.Vet;
 import nel.hardu.hnpetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
