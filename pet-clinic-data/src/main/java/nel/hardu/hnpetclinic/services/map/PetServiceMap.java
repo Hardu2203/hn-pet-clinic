@@ -1,11 +1,11 @@
 package nel.hardu.hnpetclinic.services.map;
 
 import nel.hardu.hnpetclinic.model.Pet;
-import nel.hardu.hnpetclinic.services.CrudService;
+import nel.hardu.hnpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
