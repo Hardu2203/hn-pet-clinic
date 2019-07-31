@@ -1,10 +1,7 @@
 package nel.hardu.hnpetclinic.bootstrap;
 
 import nel.hardu.hnpetclinic.model.*;
-import nel.hardu.hnpetclinic.services.OwnerService;
-import nel.hardu.hnpetclinic.services.PetTypeService;
-import nel.hardu.hnpetclinic.services.SpecialtiesService;
-import nel.hardu.hnpetclinic.services.VetService;
+import nel.hardu.hnpetclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -18,13 +15,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtiesService specialtiesService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-                      SpecialtiesService specialtiesService) {
+                      SpecialtiesService specialtiesService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtiesService = specialtiesService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -93,6 +92,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(fionasCat);
 
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy kitty");
+
+        visitService.save(catVisit);
 
         System.out.println("Loaded owners...");
 
