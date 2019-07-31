@@ -2,11 +2,13 @@ package nel.hardu.hnpetclinic.services.map;
 
 import nel.hardu.hnpetclinic.model.Specialty;
 import nel.hardu.hnpetclinic.services.SpecialtiesService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
 
     @Override

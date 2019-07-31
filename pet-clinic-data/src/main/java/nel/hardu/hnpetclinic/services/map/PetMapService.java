@@ -2,11 +2,13 @@ package nel.hardu.hnpetclinic.services.map;
 
 import nel.hardu.hnpetclinic.model.Pet;
 import nel.hardu.hnpetclinic.services.PetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
