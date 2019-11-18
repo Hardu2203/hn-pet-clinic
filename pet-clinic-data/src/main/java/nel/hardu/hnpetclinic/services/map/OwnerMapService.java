@@ -8,6 +8,8 @@ import nel.hardu.hnpetclinic.services.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -83,4 +85,10 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
 
     }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastname) {
+        return new LinkedList<>();
+    }
+
 }
